@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
+import { withTracker } from 'meteor/react-meteor-data';
 import {
   BrowserRouter as Router,
   Route,
@@ -23,7 +24,8 @@ const PrivateRoute = ({path, component}) => {
   return <Route exact path={path} component={component} />
 }
 
-export default class App extends Component {
+
+class App extends Component {
   constructor(props) {
     super(props);
   }
@@ -32,7 +34,7 @@ export default class App extends Component {
     return (
       <Router>
         <div>
-          <MainNavbar />
+          <MainNavbar userId={this.props.userId} />
 
           <Switch>
             <Route exact path="/" component={Index} />
@@ -46,3 +48,7 @@ export default class App extends Component {
     );
   }
 }
+
+export default withTracker(() => ({
+  userId: Meteor.userId()
+}))(App);

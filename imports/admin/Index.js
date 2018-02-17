@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
 import { Tracks } from '../api/Tracks';
+import { Link } from 'react-router-dom';
 
 class Index extends Component {
 
@@ -67,36 +68,50 @@ class Index extends Component {
 
   render() {
     return (
-      <div>
-        Admin<br />
+      <div className="container">
+        <h2 className="text-center">Witaj w edytorze lekcji</h2><br />
         <form onSubmit={this.handleSubmit}>
+        <p>Wpisz nazwę lekcji:</p>
+        <div className="input-group">
           <input
             type="text"
-            placeholder="nazwa ścieki"
+            className = "form-control"
+            placeholder="nazwa lekcji"
             value={this.state.newTrackName}
             onChange={this.changeNewTrackName}
           />
-          <button>Wyślij</button>
+          <button className="btn btn-success btn-block">Wyślij</button>
+          </div>
           {this.state.editingTrackId && (
             <button
               type="button"
               onClick={this.reset}
+              className = "btn btn-success"
             >
               Resetuj
             </button>
           )}
         </form>
         <div>
-          Lista ściezek:
-          <ul>
+        <br />
+          <h4 className = "text-center">Lista ściezek:</h4>
+          <br />
+          <table className = "table table-hover">
             {this.props.tracks.map(track => (
-              <li>
-                {track.name}
-                <button onClick={this.changeEditingTrackId(track._id, track.name)}>Edytuj nazwę</button>
-                <button onClick={this.deleteTrack(track._id)}>Usuń</button>
-              </li>
+              <tr>
+                <td>
+                <Link to={`/admin/track/${track._id}`}>{track.name}</Link>
+                
+                </td>
+                <td>
+                <button onClick={this.changeEditingTrackId(track._id, track.name)} className="btn-warning">Edytuj nazwę</button>
+                </td>
+                <td>
+                <button onClick={this.deleteTrack(track._id)} className="btn-danger">Usuń</button>
+                </td>
+              </tr>
             ))}
-          </ul>
+          </table>
         </div>
       </div>
     )
