@@ -9,6 +9,7 @@ import {
 import { LoginButtons } from 'meteor/okgrow:accounts-ui-react';
 
 import Index from './Index.js';
+import SingleCard from './SingleCard.js';
 import ListofPaths from './ListofPaths.js';
 import MainNavbar from './MainNavbar.js';
 import NotFound from './NotFound';
@@ -31,6 +32,9 @@ export default class App extends Component {
     return (
       <Router>
         <div>
+          <LoginButtons />
+          <Route exact path="/" component={Index} />
+          <Route exact path="/card" component={SingleCard} />
           <MainNavbar />
           <Switch>
             <Route exact path="/" component={Index} />
