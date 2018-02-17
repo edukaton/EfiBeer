@@ -12,18 +12,49 @@ class CardList extends Component {
   render() {
     const { track, cardList } = this.props;
     return (
-      <div>
-        <h1>
+      <div style={{'background': '#36D1DC',
+    'background': '-webkit-linear-gradient(to right, #5B86E5, #36D1DC)',
+    'background': 'linear-gradient(to right, #5B86E5, #36D1DC)', 'height': '100%', 'height': '100vh'}} >
+      <div className = "container" style={{'max-width': 600, 'background': 'white', 'height': '100%', 'height': '100vh'}}>
+        <h1 className = "text-center">
           {track.name}
         </h1>
-        <Link to={`/admin/track/${track._id}/add-card`}>
-          Dodaj kartę
+        <br />
+        <Link to={`/admin/track/${track._id}/add-card`} className = "btn btn-primary btn-block">
+          Dodaj nową kartę
         </Link>
         <ul>
           {cardList.map(card => (
             <li>{card.title}</li>
           ))}
         </ul>
+        <br />
+        <h4 className = "text-center">
+          Aktualnie karty:
+        </h4>
+        <div classNameName="row list-of-paths">
+          <ul className="list-group">
+            <li className="list-group-item">
+              Tytuł karty
+              <span className="badge float-right badge-success">
+                Info
+              </span>
+            </li>
+            <li className="list-group-item">
+              Tytuł karty
+              <span className="badge float-right badge-success">
+                ABCD
+              </span>
+            </li>
+            <li className="list-group-item">
+              Tytuł karty
+              <span className="badge float-right badge-success">
+                True/False
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
       </div>
     );
   }

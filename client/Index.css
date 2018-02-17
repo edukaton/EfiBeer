@@ -26,3 +26,7 @@ div.landingCenter h2 {
 .navbar {
 	margin-bottom: 0px !important;
 }
+
+.badge-success {
+	background-color: #28a745 !important;
+}

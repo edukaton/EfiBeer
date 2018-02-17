@@ -68,7 +68,11 @@ class Index extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div style={{'background': '#36D1DC',
+    'background': '-webkit-linear-gradient(to right, #5B86E5, #36D1DC)',
+    'background': 'linear-gradient(to right, #5B86E5, #36D1DC)', 'height': '100%', 'height': '100vh'}} >
+      <div className = "container" style={{'max-width': 600, 'background': 'white', 'height': '100%', 'height': '100vh'}}>
+        
         <h2 className="text-center">Witaj w edytorze lekcji</h2><br />
         <form onSubmit={this.handleSubmit}>
         <p>Wpisz nazwę lekcji:</p>
@@ -113,6 +117,7 @@ class Index extends Component {
             ))}
           </table>
         </div>
+      </div>
       </div>
     )
   }
