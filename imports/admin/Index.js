@@ -86,7 +86,7 @@ class Index extends Component {
             <button
               type="button"
               onClick={this.reset}
-              className = "btn btn-success"
+              className = "btn btn-success btn-block"
             >
               Resetuj
             </button>
