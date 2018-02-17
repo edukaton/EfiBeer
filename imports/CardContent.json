@@ -1,0 +1,49 @@
+[
+  {
+    "title": "HTTPS",
+    "description": "Z protokołem HTTPS spotykasz się, korzystając z poczty elektronicznej, bankowości internetowej czy portali społecznościowych. Staje się on coraz powszechniejszy i powinien być stosowany na wszystkich stronach wymagających logowania (w niektórych przeglądarkach przed adresem strony widnieje wówczas zielona kłódka).",
+    "type": "Info"
+  },
+  {
+    "title": "Cyberprzemoc",
+    "question": "Cyberprzemoc nie jest karalna.",
+    "description": "Fałsz! Od roku 2011 zarówno cyberprzemoc, jak i stalking są uznawane w Polsce jako czyny zabronione.",
+    "type": "Question",
+    "image_path": "",
+    "answers": [
+      {
+        "title": "Prawda",
+        "isCorrect": false
+      },
+      {
+        "title": "Fałsz",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "title": "Phishing",
+    "question": "Phishing to:",
+    "description": "Nazwa \"phishing\" wywodzi się od \"fishing\", czyli wędkowania. Pierwotnie była to praktyka stosowana przez phreakerów, zajmujących się włamaniami do systemów telekomunikacyjnych.",
+    "type": "Question",
+    "image_path": "",
+    "answers": [
+      {
+        "title": "Instalowanie oprogramowania pozwalającego na uzyskanie zdalnego dostępu do urządzenia",
+        "isCorrect": false
+      },
+      {
+        "title": "Nielegalne stosowanie filtrów antyspamowych",
+        "isCorrect": false
+      },
+      {
+        "title": "Podszywanie się pod inną osobę lub instytucję w celu wyłudzenia informacji",
+        "isCorrect": true
+      },
+      {
+        "title": "Hackowanie automatów do kawy",
+        "isCorrect": false
+      }
+    ]
+  }
+]
