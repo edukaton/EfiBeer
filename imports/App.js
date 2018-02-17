@@ -5,7 +5,8 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  Switch
+  Switch,
+  Redirect
 } from 'react-router-dom';
 import { LoginButtons } from 'meteor/okgrow:accounts-ui-react';
 
@@ -15,14 +16,18 @@ import ListofPaths from './ListofPaths.js';
 import MainNavbar from './MainNavbar.js';
 import NotFound from './NotFound';
 import AdminIndex from './admin/Index';
+import AdminCardList from './admin/CardList';
+import AdminAddCard from './admin/AddCard';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const PrivateRoute = ({path, component}) => {
-  if (!Meteor.userId()) {
-    return null;
-  }
-  return <Route exact path={path} component={component} />
-}
+const PrivateRoute = ({path, component: Component}) => (
+  <Route 
+    exact
+    path={path}
+    component={props => Meteor.userId() ? <Component {...props} /> : <Redirect to="/" />}
+  />
+)
 
 
 class App extends Component {
@@ -38,6 +43,8 @@ class App extends Component {
 
           <Switch>
             <Route exact path="/" component={Index} />
+            <PrivateRoute path="/admin/track/:trackId/add-card" component={AdminAddCard} />
+            <PrivateRoute path="/admin/track/:trackId" component={AdminCardList} />
             <PrivateRoute path="/admin" component={AdminIndex} />
             <Route exact path="/listofpaths" component={ListofPaths} />
             <Route exact path="/card" component={SingleCard} />
