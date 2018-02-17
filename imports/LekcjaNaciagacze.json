@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Wangiri",
+    "description": "Wyłudzenie polegające na uporczywym dzwonieniu do ofiary z numeru o podwyższonej opłacie i przerywaniu próby po pierwszym sygnale. Ofiara, która zdecyduje się oddzwonić, zmuszona jest pokryć (nierzadko niemały) koszt takiego połączenia.",
+    "type": "Info"
+  },
+  {
+    "title": "Nigeryjski Książę",
+    "question": "Otrzymujesz e-mail od osoby przedstawiającej się jako biznesmen z Urugwaju, który prosi o pożyczkę w wysokości 4 tys. złotych. Te fundusze mają mu umożliwić odzyskanie dostępu do swojego konta bankowego, przejętego tymczasowo przez lokalną juntę. W podzięce za przysługę przedsiębiorca obiecuje przekazać Ci 20 tys. złotych, kiedy upora się już ze swoimi przejściowymi problemami. Co powinieneś zrobić?",
+    "description": "Ta sytuacja jest przykładem <a href=\"https://pl.wikipedia.org/wiki/Nigeryjski_szwindel\">nigeryjskiego szwindlu</a>.",
+    "type": "Question",
+    "image_path": "",
+    "answers": [
+      {
+        "title": "Zgłosić na policji próbę wyłudzenia",
+        "isCorrect": false
+      },
+      {
+        "title": "Czym prędzej przelać 4 tys. złotych na konto przedsiębiorcy",
+        "isCorrect": false
+      },
+      {
+        "title": "Oznaczyć wiadomość jako spam i ostrzec bliskich przed takim naciągaczem",
+        "isCorrect": true
+      },
+      {
+        "title": "Sprawdzić wiarygodność przedsiębiorcy w Międzynarodowej Bazie Przedsiębiorców",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "title": "Bank",
+    "question": "Otrzymujesz z banku mail z prośbą o podanie swoich aktualnych danych osobowych i hasła do serwisu bankowego w celu potwierdzenia tożsamości. Jakie dane powinieneś podać?",
+    "description": "Banki nigdy nie proszą o tego typu dane w ramach weryfikacji tożsamości drogą mailową ani telefoniczną.",
+    "type": "Question",
+    "image_path": "",
+    "answers": [
+      {
+        "title": "Dane osobowe i hasło",
+        "isCorrect": false
+      },
+      {
+        "title": "Dane osobowe, ale bez hasła",
+        "isCorrect": false
+      },
+      {
+        "title": "Hasło, ale bez danych osobowych",
+        "isCorrect": true
+      },
+      {
+        "title": "Żadnych danych",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "title": "Mikropłatności",
+    "description": "Mikropłatności, choć są w pełni legalne i mogą być stosowane uczciwie, często bywają wykorzystywane przez twórców gier do wymuszania płatności na graczach, którzy bez takich wydatków przestają odnosić postępy w grze.",
+    "type": "Info"
+  },
+  {
+    "title": "Jesteś milionowym użytkownikiem!",
+    "question": "Po wejściu na stronę ze śmiesznymi filmikami na ekranie wyskauje Ci okienko z komunikatem o następującej treści: \"Gratulacje! Jako milionowy użytkownik tej strony wygrałeś nowego iPhona X! Podaj numer swojej karty kredytowej w polu poniżej, a sami zajmiemy się wysyłką nagrody!\". Jest to przykład:",
+    "description": "Ta sytuacja jest przykładem <a href=\"https://pl.wikipedia.org/wiki/Nigeryjski_szwindel\">nigeryjskiego szwindlu</a>.",
+    "type": "Question",
+    "image_path": "",
+    "answers": [
+      {
+        "title": "spamu",
+        "isCorrect": false
+      },
+      {
+        "title": "crackingu",
+        "isCorrect": false
+      },
+      {
+        "title": "trojana",
+        "isCorrect": false
+      },
+      {
+        "title": "scamu",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "title": "Usługa SMS",
+    "question": "Otrzymujesz SMS o treści \"Wiadomość z bramki SMS od XXXXX: Potwierdzamy uruchomienie usługi GorąceKociaki na numerze. Opłata za usługę wynosi 25zl (30,75zł brutto) odnawiana automatycznie co 7 dni. Aby bezpłatnie zrezygnować z usługi prosimy wysłać sms: TOP na numer XXXXX. Dziękujemy za skorzystanie z usługi.\". Co powinieneś w tej sytuacji zrobić?",
+    "description": "Należy oczywiście zignorować taki SMS. Rozwiązanie z naciągnięciem szwagra na wysłanie SMS-a wprawdzie wydaje się racjonalne, ale mimo to jest wątpliwe etycznie.",
+    "type": "Question",
+    "image_path": "",
+    "answers": [
+      {
+        "title": "Zignorować SMS",
+        "isCorrect": true
+      },
+      {
+        "title": "Zadzwonić na numer XXXXX i wyjaśnić sprawę",
+        "isCorrect": false
+      },
+      {
+        "title": "Wysłać SMS o treści TOP na numer XXXXX",
+        "isCorrect": false
+      },
+      {
+        "title": "Kazać szwagrowi wysłać SMS o treści TOP na numer XXXXX",
+        "isCorrect": false
+      }
+    ]
+  }
+]
