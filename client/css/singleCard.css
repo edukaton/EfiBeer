@@ -1,0 +1,51 @@
+.singleCardComponent {
+    height: 100vh;
+    padding: 0;
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.singleCard {
+/*    height: 80vh;
+    margin: 5% 0 5% 0;*/
+    padding: 5%;
+    background-color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.singleCardWrapper {
+    height: 80vh;
+    margin: 5% 0 5% 0;
+}
+
+.singleCardArrowLeft {
+    width: 80px;
+    height: 80px;
+    color: #FFFFFF;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.singleCardArrowRight {
+    width: 80px;
+    height: 80px;
+    color: #FFFFFF;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.fa-angle-right, .fa-angle-left {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
