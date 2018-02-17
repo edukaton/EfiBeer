@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Switch
 } from 'react-router-dom';
 import { LoginButtons } from 'meteor/okgrow:accounts-ui-react';
+
 import Index from './Index.js';
 import ListofPaths from './ListofPaths.js';
 import MainNavbar from './MainNavbar.js';
+import NotFound from './NotFound';
+import AdminIndex from './admin/Index';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import 'bootstrap/dist/css/bootstrap.css';
-
+const PrivateRoute = ({path, component}) => {
+  if (!Meteor.userId()) {
+    return null;
+  }
+  return <Route exact path={path} component={component} />
+}
 
 export default class App extends Component {
   constructor(props) {
@@ -21,11 +31,13 @@ export default class App extends Component {
     return (
       <Router>
         <div>
-          <LoginButtons />
-          <Route exact path="/" component={Index} />
-          <Route exact path="/navbar" component={MainNavbar} />
-          <Route exact path="/listofpaths" component={ListofPaths} />
-
+          <MainNavbar />
+          <Switch>
+            <Route exact path="/" component={Index} />
+            <PrivateRoute path="/admin" component={AdminIndex} />
+            <Route exact path="/listofpaths" component={ListofPaths} />
+            <Route component={NotFound} />
+          </Switch>
         </div>
       </Router>
     );
