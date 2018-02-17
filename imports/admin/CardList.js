@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
-import { Tracks } from '../api/Tracks';
+import { Tracks, authorizeTrack } from '../api/Tracks';
 import { Cards  } from '../api/Cards';
 import { Link } from 'react-router-dom';
 
@@ -11,6 +11,9 @@ class CardList extends Component {
 
   render() {
     const { track, cardList } = this.props;
+    if (!track) {
+      return null;
+    }
     return (
       <div style={{'background': '#36D1DC',
     'background': '-webkit-linear-gradient(to right, #5B86E5, #36D1DC)',
@@ -25,7 +28,11 @@ class CardList extends Component {
         </Link>
         <ul>
           {cardList.map(card => (
-            <li>{card.title}</li>
+            <li>
+              <Link to={`/admin/track/${track._id}/edit-card/${card._id}`}>
+                {card.title}
+              </Link>
+            </li>
           ))}
         </ul>
         <br />
@@ -63,8 +70,8 @@ class CardList extends Component {
 export default withTracker(({match}) => {
   const { trackId } = match.params;
   const track = Tracks.findOne(trackId);
-  if (!track) {
-    window.location.href = '/admin';
+  if (track) {
+    authorizeTrack(trackId, Meteor.userId());
   }
   const cardList = Cards.find({ trackId }).fetch();
   return {

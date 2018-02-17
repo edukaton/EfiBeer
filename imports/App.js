@@ -18,9 +18,11 @@ import NotFound from './NotFound';
 import AdminIndex from './admin/Index';
 import AdminCardList from './admin/CardList';
 import AdminAddCard from './admin/AddCard';
+import AdminEditCard from './admin/EditCard';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+Meteor.subscribe('cards');
+Meteor.subscribe('tracks');
 const PrivateRoute = ({path, component: Component}) => (
   <Route 
     exact
@@ -40,9 +42,9 @@ class App extends Component {
       <Router>
         <div>
           <MainNavbar userId={this.props.userId} />
-
           <Switch>
             <Route exact path="/" component={Index} />
+            <PrivateRoute path="/admin/track/:trackId/edit-card/:cardId" component={AdminEditCard} />
             <PrivateRoute path="/admin/track/:trackId/add-card" component={AdminAddCard} />
             <PrivateRoute path="/admin/track/:trackId" component={AdminCardList} />
             <PrivateRoute path="/admin" component={AdminIndex} />

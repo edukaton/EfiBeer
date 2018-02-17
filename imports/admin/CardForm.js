@@ -28,19 +28,36 @@ export default class CardForm extends Component {
     this.changeTextState = this.changeTextState.bind(this);
     this.changeType = this.changeType.bind(this);
     this.onIsCorrectChange = this.onIsCorrectChange.bind(this);
-
-    const card = props.card || {};
+    this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
+      title: '',
+      description: '',
+      type: 'info',
+      question: '',
+      image_path: '',
+      image_points: [],
+      answers: '',
+      isCorrect: false,
+    };
+  }
+
+  componentDidMount() {
+    this.componentWillReceiveProps(this.props);
+  }
+
+  componentWillReceiveProps(props) {
+    const card = props.card || {};
+    this.setState({
       title: card.title || '',
       description: card.description || '',
-      type: card.info || 'info',
+      type: card.type || 'info',
       question: card.question || '',
       image_path: card.image_path || '',
       image_points: card.image_points || [],
       answers: card.answers || '',
-      isCorrect: false,
-    };
+      isCorrect: card.isCorrect || false,
+    });
   }
 
   changeType({ value }) {
@@ -64,11 +81,16 @@ export default class CardForm extends Component {
     });
   }
 
+  onSubmit(e) {
+    e.preventDefault();
+    this.props.onSubmit(this.state);
+  }
+
   render() {
 
 
     return (
-      <div style={{'background': '#36D1DC',
+      <form onSubmit={this.onSubmit} style={{'background': '#36D1DC',
     'background': '-webkit-linear-gradient(to right, #5B86E5, #36D1DC)',
     'background': 'linear-gradient(to right, #5B86E5, #36D1DC)', 'height': '100%', 'height': '100vh'}} >
       <div className = "container" style={{'max-width': 600, 'background': 'white', 'height': '100%', 'height': '100vh'}}>
@@ -92,7 +114,7 @@ export default class CardForm extends Component {
         <p>
           Nazwa fraszki:
         </p>
-        <input 
+        <input
           type="text"
           value={this.state.title}
           onChange={this.changeTextState('title')}
@@ -116,7 +138,7 @@ export default class CardForm extends Component {
         <p>
           Pytanie zadane użytnikowi:
         </p>
-          <input 
+          <input
             type="text"
             value={this.state.question}
             onChange={this.changeTextState('question')}
@@ -131,7 +153,7 @@ export default class CardForm extends Component {
           <p>
             Podaj adres obrazka:
           </p>
-          <input 
+          <input
             type="text"
             value={this.state.image_path}
             onChange={this.changeTextState('image_path')}
@@ -162,8 +184,9 @@ export default class CardForm extends Component {
             </p>
           </div>
         )}
+        <button className="btn btn-success">Wyślij</button>
       </div>
-      </div>
+      </form>
     );
   }
 }
