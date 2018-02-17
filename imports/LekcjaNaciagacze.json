@@ -8,7 +8,7 @@
     "title": "Nigeryjski Książę",
     "question": "Otrzymujesz e-mail od osoby przedstawiającej się jako biznesmen z Urugwaju, który prosi o pożyczkę w wysokości 4 tys. złotych. Te fundusze mają mu umożliwić odzyskanie dostępu do swojego konta bankowego, przejętego tymczasowo przez lokalną juntę. W podzięce za przysługę przedsiębiorca obiecuje przekazać Ci 20 tys. złotych, kiedy upora się już ze swoimi przejściowymi problemami. Co powinieneś zrobić?",
     "description": "Ta sytuacja jest przykładem <a href=\"https://pl.wikipedia.org/wiki/Nigeryjski_szwindel\">nigeryjskiego szwindlu</a>.",
-    "type": "Question",
+    "type": "question",
     "image_path": "",
     "answers": [
       {
@@ -33,7 +33,7 @@
     "title": "Bank",
     "question": "Otrzymujesz z banku mail z prośbą o podanie swoich aktualnych danych osobowych i hasła do serwisu bankowego w celu potwierdzenia tożsamości. Jakie dane powinieneś podać?",
     "description": "Banki nigdy nie proszą o tego typu dane w ramach weryfikacji tożsamości drogą mailową ani telefoniczną.",
-    "type": "Question",
+    "type": "question",
     "image_path": "",
     "answers": [
       {
@@ -63,7 +63,7 @@
     "title": "Jesteś milionowym użytkownikiem!",
     "question": "Po wejściu na stronę ze śmiesznymi filmikami na ekranie wyskauje Ci okienko z komunikatem o następującej treści: \"Gratulacje! Jako milionowy użytkownik tej strony wygrałeś nowego iPhona X! Podaj numer swojej karty kredytowej w polu poniżej, a sami zajmiemy się wysyłką!\". Jest to przykład:",
     "description": "Ta sytuacja jest przykładem <a href=\"https://pl.wikipedia.org/wiki/Nigeryjski_szwindel\">nigeryjskiego szwindlu</a>.",
-    "type": "Question",
+    "type": "question",
     "image_path": "",
     "answers": [
       {
@@ -88,7 +88,7 @@
     "title": "Usługa SMS",
     "question": "Otrzymujesz SMS o treści \"Wiadomość z bramki SMS od XXXXX: Potwierdzamy uruchomienie usługi GorąceKociaki na numerze. Opłata za usługę wynosi 25zl (30,75zł brutto) odnawiana automatycznie co 7 dni. Aby bezpłatnie zrezygnować z usługi prosimy wysłać sms: TOP na numer XXXXX. Dziękujemy za skorzystanie z usługi.\". Co powinieneś w tej sytuacji zrobić?",
     "description": "Należy oczywiście zignorować taki SMS. Rozwiązanie z naciągnięciem szwagra na wysłanie SMS-a wprawdzie wydaje się racjonalne, ale mimo to jest wątpliwe etycznie.",
-    "type": "Question",
+    "type": "question",
     "image_path": "",
     "answers": [
       {
