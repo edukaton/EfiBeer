@@ -18,33 +18,26 @@
 
 .singleCardWrapper {
     padding: 2% 0 0 0;
-    vertical-align: middle;
+    height: 100%;
 }
 
 .singleCardArrowLeft {
-    width: 80px;
-    height: 80px;
     color: #FFFFFF;
     font-size: 80px;
-    line-height: 80px;
     text-align: right;
+    display: inline-block;
     vertical-align: middle;
 }
 
 .singleCardArrowRight {
-    width: 80px;
-    height: 80px;
     color: #FFFFFF;
     font-size: 80px;
-    line-height: 80px;
     text-align: left;
+    display: inline-block;
     vertical-align: middle;
 }
 
-.fa-angle-right, .fa-angle-left {
-    width: 80px;
-    height: 80px;
+.singleCardArrowLeft i, .singleCardArrowRight i {
     display: inline-block;
-    text-align: center;
     vertical-align: middle;
 }
