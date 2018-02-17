@@ -18,7 +18,7 @@
     perspective: 1000px;
 }
 
-.singleCard:hover .singleCardflipper, .singleCard.hover .singleCardflipper {
+.rotate {
     transform: rotateY(180deg);
 }
 
