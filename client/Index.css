@@ -1,5 +1,5 @@
 .landingContainer {
-	background-image: url("https://obamawhitehouse.archives.gov/sites/default/files/image/image_file/p052811lj-0411.jpg");
+	background-image: url("/bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -21,4 +21,12 @@ div.landingCenter h1 {
 div.landingCenter h2 {
 	margin-bottom: 60px;
 	text-shadow: 1px 1px 7px rgba(0, 0, 0, .8);
+}
+
+.navbar {
+	margin-bottom: 0px !important;
+}
+
+.badge-success {
+	background-color: #28a745 !important;
 }
