@@ -22,6 +22,24 @@ export default () =>
                         </button>
                     </div>
 
+                    <div className="singleCardABCD">
+                        <button type="submit" className="btn">
+                            (A) Odpowiedź A
+                        </button>
+                        <button type="submit" className="btn" >
+                            (B) Odpowiedź B
+                        </button>
+                        <br />
+                        <button type="submit" className="btn">
+                            (C) Odpowiedź C
+                        </button>
+                        <button type="submit" className="btn">
+                            (D) Odpowiedź D
+                        </button>
+                    </div>
+
+
+
 
                 </div>
             </div>

@@ -19,7 +19,11 @@
 }
 
 .singleCardDescription {
+    height: 100%;
     padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
 }
 
 .singleCardDescription h1 {
@@ -53,3 +57,30 @@
 }
 
 /* TRUE FALSE BUTTONS END */
+
+
+/* ABCD BUTTONS START*/
+
+.singleCardABCD {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    /*display: none;*/ /* SHOW ON/OFF*/
+}
+
+.singleCardABCD button {
+    width: 50%;
+    padding: 3% 5% !important;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+.singleCardABCD button:hover {
+    background-color: #6BCAE2;
+}
+
+/* ABCD BUTTONS END */
