@@ -32,10 +32,9 @@ export default class App extends Component {
     return (
       <Router>
         <div>
-          <LoginButtons />
+          <MainNavbar />
           <Route exact path="/" component={Index} />
           <Route exact path="/card" component={SingleCard} />
-          <MainNavbar />
           <Switch>
             <Route exact path="/" component={Index} />
             <PrivateRoute path="/admin" component={AdminIndex} />

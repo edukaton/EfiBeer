@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { LoginButtons } from 'meteor/okgrow:accounts-ui-react';
 
 
 export default () => 
@@ -14,8 +14,7 @@ export default () =>
       <li><a href="#">Page 2</a></li>
     </ul>
     <ul className="nav">
-      <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+    	<LoginButtons />
     </ul>
   </div>
 </nav>;
