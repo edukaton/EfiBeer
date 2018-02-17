@@ -39,7 +39,8 @@
     width: 100%;
     position: absolute;
     bottom: 0px;
-    /*display: none;*/ /* SHOW ON/OFF*/
+    display: block;
+    display: none; /* SHOW ON/OFF*/
 }
 
 .singleCardTrueFalse button {
@@ -65,7 +66,7 @@
     width: 100%;
     position: absolute;
     bottom: 0px;
-    display: none; /* SHOW ON/OFF*/
+    /*display: none;*/ /* SHOW ON/OFF*/
 }
 
 .singleCardABCD button {

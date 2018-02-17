@@ -8,11 +8,9 @@ export default () =>
             </div>
             <div className="col-md-8">
                 <div className="singleCard">
-                    <div className="singleCardDescriptionContainer">
-                        <div className="singleCardDescription">
-                            <h1 className="singleCardTitle">singleCardTitle</h1>
-                            <p>To jest przykładowa treść</p>
-                        </div>
+                    <div className="singleCardDescription">
+                        <h1 className="singleCardTitle">singleCardTitle</h1>
+                        <p>To jest przykładowa treść</p>
                     </div>
 
                     <div className="singleCardTrueFalse">
@@ -39,9 +37,6 @@ export default () =>
                             (D) Odpowiedź D
                         </button>
                     </div>
-
-
-
 
                 </div>
             </div>
