@@ -1,6 +1,6 @@
 import React from 'react';
 import { LoginButtons } from 'meteor/okgrow:accounts-ui-react';
-
+import { Meteor } from 'meteor/meteor';
 
 export default () => 
 <nav className="navbar navbar-inverse">
@@ -12,6 +12,10 @@ export default () =>
       <li className="active"><a href="#">Home</a></li>
       <li><a href="#">Page 1</a></li>
       <li><a href="#">Page 2</a></li>
+      {Meteor.userId() && (
+      	<li><a href="/admin">Edytor</a></li>
+      )}
+
     </ul>
     <ul className="nav">
     	<LoginButtons />
