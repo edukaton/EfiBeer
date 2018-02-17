@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom';
 import { LoginButtons } from 'meteor/okgrow:accounts-ui-react';
 import Index from './Index.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default class App extends Component {
   constructor(props) {
