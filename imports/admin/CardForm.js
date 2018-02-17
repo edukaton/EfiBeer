@@ -87,74 +87,106 @@ export default class CardForm extends Component {
   }
 
   render() {
+
+
     return (
-      <div>
-        <form onSubmit={this.onSubmit}>
-          <Select
-            value={this.state.type}
-            onChange={this.changeType}
-            options={[
-              { value: 'info', label: 'Info' },
-              { value: 'question', label: 'Pytanie' },
-              { value: 'truefalse', label: 'Prawda/Fałsz' },
-              { value: 'image', label: 'Obraz' },
-            ]}
-          />
-          <br />
-          <input 
-            type="text"
-            value={this.state.title}
-            onChange={this.changeTextState('title')}
-            placeholder="tytuł"
-          />
-          <br />
-          <textarea
-            placeholder="opis"
-            onChange={this.changeTextState('description')}
-            value={this.state.description}
-          />
-          <br />
-          {this.state.type !== 'info' && (
-            <input 
-              type="text"
-              value={this.state.question}
-              onChange={this.changeTextState('question')}
-              placeholder="pytanie"
-            />
-          )}
-          <br />
-          {this.state.type === 'image' && (
-            <input 
-              type="text"
-              value={this.state.image_path}
-              onChange={this.changeTextState('image_path')}
-              placeholder="adres obrazka"
-            />
-          )}
-          {this.state.type === 'truefalse' && [
-            <input
-              type="checkbox"
-              checked={this.state.isTrue}
-              onChange={this.onIsCorrectChange}
-            />,
-            'Poprawne'
+      <form onSubmit={this.onSubmit} style={{'background': '#36D1DC',
+    'background': '-webkit-linear-gradient(to right, #5B86E5, #36D1DC)',
+    'background': 'linear-gradient(to right, #5B86E5, #36D1DC)', 'height': '100%', 'height': '100vh'}} >
+      <div className = "container" style={{'max-width': 600, 'background': 'white', 'height': '100%', 'height': '100vh'}}>
+        <h3 className = "text-center">
+          Stwórz własną fraszkę!
+        </h3>
+        <p className = "">
+          Wybierz rodzaj fraszki:
+        </p>
+        <Select
+          value={this.state.type}
+          onChange={this.changeType}
+          options={[
+            { value: 'info', label: 'Info' },
+            { value: 'question', label: 'Pytanie' },
+            { value: 'truefalse', label: 'Prawda/Fałsz' },
+            { value: 'image', label: 'Obraz' },
           ]}
-          {this.state.type === 'question' && (
-            <div>
-              <h3>Odpowiedzi</h3>
-              <p>Oddzielaj przecinkiem</p>
-              <p>Pierwsza jest poprawna</p>
-              <p>Będa się losować</p>
-              <textarea
-                placeholder="odpowiedzi"
-                onChange={this.changeTextState('answers')}
-                value={this.state.answers}
-              />
-            </div>
-          )}
-          <button>Wyślij</button>
-        </form>
+        />
+        <br />
+        <p>
+          Nazwa fraszki:
+        </p>
+        <input
+          type="text"
+          value={this.state.title}
+          onChange={this.changeTextState('title')}
+          placeholder="Wisz tytuł fraszki"
+          className = "form-control"
+        />
+        <br />
+        <p>
+          Opis danego zagadnienia:
+        </p>
+        <textarea
+          placeholder="Wpisz opis"
+          onChange={this.changeTextState('description')}
+          value={this.state.description}
+          className = "form-control"
+          rows="8"
+        />
+        <br />
+        {this.state.type !== 'info' && (
+        <div>
+        <p>
+          Pytanie zadane użytnikowi:
+        </p>
+          <input
+            type="text"
+            value={this.state.question}
+            onChange={this.changeTextState('question')}
+            placeholder="Wpisz pytanie"
+            className = "form-control"
+          />
+          </div>
+        )}
+        <br />
+        {this.state.type === 'image' && (
+          <div>
+          <p>
+            Podaj adres obrazka:
+          </p>
+          <input
+            type="text"
+            value={this.state.image_path}
+            onChange={this.changeTextState('image_path')}
+            placeholder="adres obrazka"
+            className = "form-control"
+          />
+          </div>
+        )}
+        {this.state.type === 'truefalse' && [
+          <input
+            type="checkbox"
+            checked={this.state.isTrue}
+            onChange={this.onIsCorrectChange}
+          />,
+          'Poprawne'
+        ]}
+        {this.state.type === 'question' && (
+          <div>
+            <p>Odpowiedzi</p>
+            <textarea
+              placeholder="Odpowiedzi należy rozdzielić przecinkiem. Przykład poniżej."
+              onChange={this.changeTextState('answers')}
+              value={this.state.answers}
+              className = "form-control"
+            />
+            <p>
+              Schemat: Prawidłowa odpowiedź,zła odpowiedź,zła odpowiedź,zła odpowiedź
+            </p>
+          </div>
+        )}
+        <button className="btn btn-success">Wyślij</button>
       </div>
+      </form>
     );
   }
 }
