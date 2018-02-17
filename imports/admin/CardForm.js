@@ -65,8 +65,19 @@ export default class CardForm extends Component {
   }
 
   render() {
+
+
     return (
-      <div>
+      <div style={{'background': '#36D1DC',
+    'background': '-webkit-linear-gradient(to right, #5B86E5, #36D1DC)',
+    'background': 'linear-gradient(to right, #5B86E5, #36D1DC)', 'height': '100%', 'height': '100vh'}} >
+      <div className = "container" style={{'max-width': 600, 'background': 'white', 'height': '100%', 'height': '100vh'}}>
+        <h3 className = "text-center">
+          Stwórz własną fraszkę!
+        </h3>
+        <p className = "">
+          Wybierz rodzaj fraszki:
+        </p>
         <Select
           value={this.state.type}
           onChange={this.changeType}
@@ -78,35 +89,56 @@ export default class CardForm extends Component {
           ]}
         />
         <br />
+        <p>
+          Nazwa fraszki:
+        </p>
         <input 
           type="text"
           value={this.state.title}
           onChange={this.changeTextState('title')}
-          placeholder="tytuł"
+          placeholder="Wisz tytuł fraszki"
+          className = "form-control"
         />
         <br />
+        <p>
+          Opis danego zagadnienia:
+        </p>
         <textarea
-          placeholder="opis"
+          placeholder="Wpisz opis"
           onChange={this.changeTextState('description')}
           value={this.state.description}
+          className = "form-control"
+          rows="8"
         />
         <br />
         {this.state.type !== 'info' && (
+        <div>
+        <p>
+          Pytanie zadane użytnikowi:
+        </p>
           <input 
             type="text"
             value={this.state.question}
             onChange={this.changeTextState('question')}
-            placeholder="pytanie"
+            placeholder="Wpisz pytanie"
+            className = "form-control"
           />
+          </div>
         )}
         <br />
         {this.state.type === 'image' && (
+          <div>
+          <p>
+            Podaj adres obrazka:
+          </p>
           <input 
             type="text"
             value={this.state.image_path}
             onChange={this.changeTextState('image_path')}
             placeholder="adres obrazka"
+            className = "form-control"
           />
+          </div>
         )}
         {this.state.type === 'truefalse' && [
           <input
@@ -118,17 +150,19 @@ export default class CardForm extends Component {
         ]}
         {this.state.type === 'question' && (
           <div>
-            <h3>Odpowiedzi</h3>
-            <p>Oddzielaj przecinkiem</p>
-            <p>Pierwsza jest poprawna</p>
-            <p>Będa się losować</p>
+            <p>Odpowiedzi</p>
             <textarea
-              placeholder="odpowiedzi"
+              placeholder="Odpowiedzi należy rozdzielić przecinkiem. Przykład poniżej."
               onChange={this.changeTextState('answers')}
               value={this.state.answers}
+              className = "form-control"
             />
+            <p>
+              Schemat: Prawidłowa odpowiedź,zła odpowiedź,zła odpowiedź,zła odpowiedź
+            </p>
           </div>
         )}
+      </div>
       </div>
     );
   }
