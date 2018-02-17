@@ -3,11 +3,11 @@ import CardForm from './CardForm';
 import { Meteor } from 'meteor/meteor';
 import { Redirect } from 'react-router'
 
-export default ({history}) => <div>
+export default ({match, history}) => <div>
     <CardForm
       onSubmit={data => {
-        Meteor.call('cards.insert', data);
-        history.push(`/admin/track/${match.trackId}`);
+        Meteor.call('cards.insert', match.params.trackId, data);
+        history.push(`/admin/track/${match.params.trackId}`);
       }}
     />
   </div>
