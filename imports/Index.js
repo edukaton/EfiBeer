@@ -11,6 +11,8 @@ const Index = ({trackList}) =>
 			<br /><br />
 	    <h3>Zobacz przykładową lekcję!</h3>
 			<br /><br />
+<div style={{"display": "block"}}>
+
 
 			{trackList && trackList.map(track => (
   <div className="card" style={{"width": "20rem"}}>
@@ -29,6 +31,8 @@ const Index = ({trackList}) =>
 
 </div>
 			))}
+			</div>
+			
     </div>
   </div>;
 

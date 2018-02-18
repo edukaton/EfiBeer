@@ -19,6 +19,7 @@ import AdminIndex from './admin/Index';
 import AdminCardList from './admin/CardList';
 import AdminAddCard from './admin/AddCard';
 import AdminEditCard from './admin/EditCard';
+import Fotter from './Fotter.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 Meteor.subscribe('cards');
@@ -51,6 +52,7 @@ class App extends Component {
             <PrivateRoute path="/admin" component={AdminIndex} />
             <Route component={NotFound} />
           </Switch>
+          <Fotter />
         </div>
       </Router>
     );
