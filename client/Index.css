@@ -1,5 +1,5 @@
 .landingContainer {
-	background-image: url("landing_bg.jpg");
+	background-image: url("/landing_bg.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -34,4 +34,11 @@ div.landingCenter h3 {
 
 .badge-success {
 	background-color: #28a745 !important;
+}
+
+
+.card {
+	width: 30% !important;
+    display: inline-block !important;
+    margin: 20px !important;
 }

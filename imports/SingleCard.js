@@ -1,24 +1,49 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 
-export default class extends Component {
+const shuffleArray = arr => arr.sort(() => Math.random() - 0.5);
+
+export default class SingleCard extends Component {
 
     constructor(props) {
         super(props);
 
-        this.toggleClicked = this.toggleClicked.bind(this);
+        this.toggleAnswered = this.toggleAnswered.bind(this);
         this.state = {
-            clicked: false,
+            answered: false,
+            correct: false,
         };
     }
 
-    toggleClicked() {
+    componentDidMount() {
+        this.componentWillReceiveProps(props);
+    }
+
+    componentWillReceiveProps(props) {
+        if (!props.card) {
+            props.incrementStage();
+        }
         this.setState({
-            clicked: !this.state.clicked,
+            answered: false,
+            correct: false,
         });
     }
 
+    toggleAnswered(answer) {
+        return e => {
+            this.setState({
+                answered: !this.state.answered,
+                correct: this.props.card.answers.split(',')[0] === answer,
+            });
+        }
+    }
+
     render() {
+        const {
+            card,
+            isLast,
+            incrementStage,
+        } = this.props;
         return (
             <div className="singleCardComponent">
                 <div className="container-fluid">
@@ -30,45 +55,64 @@ export default class extends Component {
                                 
                                 <div 
                                     className={classnames('singleCardflipper', {
-                                        rotate: this.state.clicked,
+                                        // rotate: this.state.answered || card.type === 'info',
                                     })}
-                                    onClick={this.toggleClicked}
                                 >
-                                <div className="singleCardFront">
-                                    <div className="singleCardDescription">
-                                        <h1 className="singleCardTitle">singleCardTitle</h1>
-                                        <p>To jest przykładowa treść</p>
-                                    </div>
+                                {!this.state.answered && card.type.toLowerCase() !== 'info' && (
+                                    <div className="singleCardFront">
+                                        <div className="singleCardDescription">
+                                            <h1 className="singleCardTitle">{card.title}</h1>
+                                            <p>
+                                                {card.type.toLowerCase() === 'info' ? '' : card.question}
+                                            </p>
+                                        </div>
 
-                                    <div className="singleCardTrueFalse">
-                                        <button type="submit" className="btn-success">
-                                            Prawda <i className="fas fa-thumbs-up"></i>
-                                        </button>
-                                        <button type="submit" className="btn-danger" >
-                                            Fałsz <i className="fas fa-thumbs-down"></i>
+                                        {card.type.toLowerCase() === 'truefalse' && (
+                                            <div className="singleCardTrueFalse">
+                                            <button type="button" onClick={this.toggleAnswered('prawda')} className="btn-success">
+                                                Prawda <i className="fas fa-thumbs-up"></i>
+                                            </button>
+                                            <button type="button" onClick={this.toggleAnswered('fałsz')} className="btn-danger" >
+                                                Fałsz <i className="fas fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                        )}
+
+                                        {card.type.toLowerCase() === 'question' && (
+                                            <div className="singleCardABCD">
+                                                {shuffleArray(card.answers.split(',').map(answer => (
+                                                    <button 
+                                                        type="button"
+                                                        className="btn"
+                                                        onClick={this.toggleAnswered(answer)}
+                                                    >
+                                                        {answer}
+                                                    </button>
+                                                )))}
+                                            </div>
+                                        )}
+                                    
+                                    </div>
+                                )}
+
+                                {(this.state.answered || card.type.toLowerCase() === 'info') && (
+                                    <div className="singleCardBack">
+                                        <h1 className="singleCardTitle">{card.title}</h1>
+                                    
+                                        {card.type.toLowerCase() !== 'info' && (
+                                            <h2>{this.state.correct ? 'Dobrze' : 'Źle'}</h2>
+                                        )}
+                                        <div
+                                            dangerouslySetInnerHTML={{__html: card.description}}
+                                        />
+                                        <br /><br />
+                                        <button
+                                            onClick={incrementStage}
+                                        >
+                                            {isLast ? 'Zakończ' : 'Dalej'}
                                         </button>
                                     </div>
-
-                                    <div className="singleCardABCD">
-                                        <button type="submit" className="btn">
-                                            (A) Odpowiedź A
-                                        </button>
-                                        <button type="submit" className="btn" >
-                                            (B) Odpowiedź B
-                                        </button>
-                                        <br />
-                                        <button type="submit" className="btn">
-                                            (C) Odpowiedź C
-                                        </button>
-                                        <button type="submit" className="btn">
-                                            (D) Odpowiedź D
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className="singleCardBack">
-                                    BACK_CARD
-                                </div>
+                                )}
                                 </div>
 
                             </div>

@@ -10,7 +10,10 @@ export default ({ userId }) =>
       <a className="navbar-brand" href="/"> {<i className="far fa-clone"></i>} eduCards</a>
     </div>
     <ul className="nav">
+<<<<<<< HEAD
       <li><Link to="/">{<i className="fas fa-home"></i>} Home</Link></li>
+=======
+>>>>>>> d36881791f16776ab943491ffa49ee9df46ff169
       {userId ?
       	<li><Link to="/admin">{<i className="far fa-edit"></i>} Edytor</Link></li>: ''
        }
