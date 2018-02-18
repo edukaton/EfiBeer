@@ -18,6 +18,7 @@
     color: #EFEFEF;
 }
 
-#mainNavbarComponent ul.nav a:hover {
+#mainNavbarComponent ul.nav li a:hover,
+#mainNavbarComponent ul.nav li a:active {
     color: #5B86E5;
 }
