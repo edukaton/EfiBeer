@@ -8,7 +8,7 @@
     "title": "Cyberprzemoc",
     "question": "Cyberprzemoc nie jest karalna.",
     "description": "Fałsz! Od roku 2011 zarówno cyberprzemoc, jak i stalking są uznawane w Polsce jako czyny zabronione.",
-    "type": "Question",
+    "type": "question",
     "image_path": "",
     "answers": [
       {
@@ -25,7 +25,7 @@
     "title": "Phishing",
     "question": "Phishing to:",
     "description": "Nazwa \"phishing\" wywodzi się od \"fishing\", czyli wędkowania. Pierwotnie była to praktyka stosowana przez phreakerów, zajmujących się włamaniami do systemów telekomunikacyjnych.",
-    "type": "Question",
+    "type": "question",
     "image_path": "",
     "answers": [
       {

@@ -15,6 +15,20 @@ export default class SingleCard extends Component {
         };
     }
 
+    componentDidMount() {
+        this.componentWillReceiveProps(props);
+    }
+
+    componentWillReceiveProps(props) {
+        if (!props.card) {
+            props.incrementStage();
+        }
+        this.setState({
+            answered: false,
+            correct: false,
+        });
+    }
+
     toggleAnswered(answer) {
         return e => {
             this.setState({
@@ -41,56 +55,64 @@ export default class SingleCard extends Component {
                                 
                                 <div 
                                     className={classnames('singleCardflipper', {
-                                        rotate: this.state.answered || card.type === 'Info',
+                                        // rotate: this.state.answered || card.type === 'Info',
                                     })}
                                 >
-                                <div className="singleCardFront">
-                                    <div className="singleCardDescription">
-                                        <h1 className="singleCardTitle">{card.title}</h1>
-                                        <p>
-                                            {card.type === 'info' ? '' : card.question}
-                                        </p>
-                                    </div>
-
-                                    {card.type === 'truefalse' && (
-                                        <div className="singleCardTrueFalse">
-                                        <button type="button" onClick={this.toggleAnswered('prawda')} className="btn-success">
-                                            Prawda <i className="fas fa-thumbs-up"></i>
-                                        </button>
-                                        <button type="button" onClick={this.toggleAnswered('fałsz')} className="btn-danger" >
-                                            Fałsz <i className="fas fa-thumbs-down"></i>
-                                        </button>
-                                    </div>
-                                    )}
-
-                                    {card.type === 'question' && (
-                                        <div className="singleCardABCD">
-                                            {shuffleArray(cards.answers.split(',').map(answer => (
-                                                <button 
-                                                    type="button"
-                                                    className="btn"
-                                                    onClick={this.toggleAnswered(answer)}
-                                                >
-                                                    {answer}
-                                                </button>
-                                            )))}
+                                {!this.state.answered && card.type !== 'Info' && (
+                                    <div className="singleCardFront">
+                                        <div className="singleCardDescription">
+                                            <h1 className="singleCardTitle">{card.title}</h1>
+                                            <p>
+                                                {card.type === 'Info' ? '' : card.question}
+                                            </p>
                                         </div>
-                                    )}
-                                
-                                </div>
 
-                                <div className="singleCardBack">
-                                    <h2>{this.state.correct ? 'Dobrze' : 'Źle'}</h2>
-                                    <div>
-                                        {card.description}
+                                        {card.type === 'truefalse' && (
+                                            <div className="singleCardTrueFalse">
+                                            <button type="button" onClick={this.toggleAnswered('prawda')} className="btn-success">
+                                                Prawda <i className="fas fa-thumbs-up"></i>
+                                            </button>
+                                            <button type="button" onClick={this.toggleAnswered('fałsz')} className="btn-danger" >
+                                                Fałsz <i className="fas fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                        )}
+
+                                        {card.type === 'question' && (
+                                            <div className="singleCardABCD">
+                                                {shuffleArray(card.answers.split(',').map(answer => (
+                                                    <button 
+                                                        type="button"
+                                                        className="btn"
+                                                        onClick={this.toggleAnswered(answer)}
+                                                    >
+                                                        {answer}
+                                                    </button>
+                                                )))}
+                                            </div>
+                                        )}
+                                    
                                     </div>
-                                    <br /><br />
-                                    <button
-                                        onClick={incrementStage}
-                                    >
+                                )}
 
-                                    </button>
-                                </div>
+                                {(this.state.answered || card.type === 'Info') && (
+                                    <div className="singleCardBack">
+                                        <h1 className="singleCardTitle">{card.title}</h1>
+                                    
+                                        {card.type !== 'Info' && (
+                                            <h2>{this.state.correct ? 'Dobrze' : 'Źle'}</h2>
+                                        )}
+                                        <div
+                                            dangerouslySetInnerHTML={{__html: card.description}}
+                                        />
+                                        <br /><br />
+                                        <button
+                                            onClick={incrementStage}
+                                        >
+                                            {isLast ? 'Zakończ' : 'Dalej'}
+                                        </button>
+                                    </div>
+                                )}
                                 </div>
 
                             </div>
