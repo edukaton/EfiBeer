@@ -14,6 +14,7 @@ import Index from './Index.js';
 import SingleCard from './SingleCard.js';
 import ListofPaths from './ListofPaths.js';
 import MainNavbar from './MainNavbar.js';
+import SideNavbar from './SideNavbar.js';
 import NotFound from './NotFound';
 import AdminIndex from './admin/Index';
 import AdminCardList from './admin/CardList';
