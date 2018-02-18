@@ -33,7 +33,7 @@ export default class SingleCard extends Component {
         return e => {
             this.setState({
                 answered: !this.state.answered,
-                correct: this.props.card.answers.split(',')[0] === answer,
+                correct: this.props.card.answers.split(',')[0].toLowerCase() === answer.toLowerCase(),
             });
         }
     }
