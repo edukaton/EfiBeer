@@ -1,5 +1,10 @@
 [
   {
+    "title": "Dzieńdobry",
+    "description": "Witaj na lekcji poświęconej cyber-bezpieczeństwa. Aby przejść dalej kliknij poniższy button.", 
+    "type": "Info"
+  },
+  {
     "title": "HTTPS",
     "description": "Z protokołem HTTPS spotykasz się, korzystając z poczty elektronicznej, bankowości internetowej czy portali społecznościowych. Staje się on coraz powszechniejszy i powinien być stosowany na wszystkich stronach wymagających logowania (w niektórych przeglądarkach przed adresem strony widnieje wówczas zielona kłódka).",
     "type": "Info"
