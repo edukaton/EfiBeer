@@ -38,10 +38,11 @@
     top: 0;
     right: 0;
     width: 100%;
+    padding: 80px 30px 30px 30px;
     /* transform: rotateY(180deg); */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .singleCardflipper {
@@ -55,10 +56,10 @@
 
 .singleCardDescription {
     height: 100%;
-    padding: 5%;
+    padding: 80px 30px 30px 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: flex-start;
 }
 
 .singleCardDescription h1 {
