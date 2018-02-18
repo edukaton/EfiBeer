@@ -13,6 +13,7 @@ import { LoginButtons } from 'meteor/okgrow:accounts-ui-react';
 import Index from './Index.js';
 import ListofPaths from './ListofPaths.js';
 import MainNavbar from './MainNavbar.js';
+import SideNavbar from './SideNavbar.js';
 import NotFound from './NotFound';
 import Track from './Track';
 import AdminIndex from './admin/Index';

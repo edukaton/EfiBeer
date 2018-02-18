@@ -12,7 +12,7 @@
     position: relative;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-size: 22px;
+    font-size: 1.2em;
     vertical-align: middle;
     /*FLIP*/
     perspective: 1000px;
@@ -62,7 +62,7 @@
 }
 
 .singleCardDescription h1 {
-    font-size: 32px;
+    font-size: 1.2em;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -75,9 +75,10 @@
     position: absolute;
     bottom: 0px;
     display: block;
+    /*display: none; *//* SHOW ON/OFF*/
 }
 
-.singleCardTrueFalse button {
+.singleCardTrueFalse div {
     width: 50%;
     padding: 3% 5% !important;
     font-size: 20px;
@@ -86,7 +87,7 @@
     text-transform: uppercase;
 }
 
-.singleCardTrueFalse button i {
+.singleCardTrueFalse div i {
     font-size: 20px;
     padding: 0 4px;
 }
@@ -98,22 +99,26 @@
 
 .singleCardABCD {
     width: 100%;
+    height-mix: 250px;
     position: absolute;
     bottom: 0px;
+    /* display: none; */ /* SHOW ON/OFF*/
 }
 
-.singleCardABCD button {
+.singleCardABCD div {
     width: 50%;
-    padding: 3% 5% !important;
+    height: 100%;
+    padding: 10px 20px !important;
     background-color: #FFFFFF;
-    font-size: 20px;
+    font-size: 0.7em;
     font-weight: bold;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     border-radius: 0;
+    display: inline-block;
 }
 
-.singleCardABCD button:hover {
+.singleCardABCD div:hover {
     background-color: #6BCAE2;
 }
 
