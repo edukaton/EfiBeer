@@ -4,6 +4,12 @@ import { Tracks, authorizeTrack } from '../api/Tracks';
 import { Cards  } from '../api/Cards';
 import { Link } from 'react-router-dom';
 
+const typeToName = {
+  info: 'Info',
+  question: 'Pytanie',
+  truefalse: 'Prawda/Fałsz',
+}
+
 class CardList extends Component {
   constructor(props) {
     super(props);
@@ -38,7 +44,7 @@ class CardList extends Component {
                 {card.title}
               </Link>
               <span className="badge float-right badge-success">
-                {card.type}
+                {typeToName[card.type]}
               </span>
             </li>
           ))}

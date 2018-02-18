@@ -117,7 +117,7 @@ export default class CardForm extends Component {
             { value: 'info', label: 'Info' },
             { value: 'question', label: 'Pytanie' },
             { value: 'truefalse', label: 'Prawda/Fałsz' },
-            { value: 'image', label: 'Obraz' },
+            // { value: 'image', label: 'Obraz' },
           ]}
         />
         <br />

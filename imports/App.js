@@ -50,7 +50,7 @@ class App extends Component {
             <Route exact path="/track/:trackId" component={Track} />
             <PrivateRoute path="/admin/track/:trackId/edit-card/:cardId" component={AdminEditCard} />
             <PrivateRoute path="/admin/track/:trackId/add-card" component={AdminAddCard} />
-            <PrivateRoute path="/listOfLessons" component={ListofLessons} />
+            <Route path="/listOfLessons" component={ListofLessons} />
             <PrivateRoute path="/admin/track/:trackId" component={AdminCardList} />
             <PrivateRoute path="/admin" component={AdminIndex} />
             <Route component={NotFound} />
