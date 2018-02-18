@@ -3,7 +3,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import { Tracks } from './api/Tracks';
 import { Link } from 'react-router-dom';
 
-const Index = ({trackList}) => 
+const Index = ({trackList}) =>
   <div className="landingContainer">
   	<div className="landingCenter">
 	    <h1 style={{'font-size': 120}}>EduCards</h1>
@@ -16,7 +16,7 @@ const Index = ({trackList}) =>
 
 			{trackList && trackList.map(track => (
   <div className="card" style={{"width": "20rem"}}>
-  <img className="card-img-top" src="../landing02.jpeg" alt="Card image cap" />
+  <img className="card-img-top" src="../landing_cards01.jpg" alt="Card image cap" />
   <div className="card-block">
     <Link to={`/track/${track._id}`}>
     <h4 className="card-title" style={{"color": "black"}}>{track.name}</h4>
@@ -32,7 +32,7 @@ const Index = ({trackList}) =>
 </div>
 			))}
 			</div>
-			
+
     </div>
   </div>;
 
