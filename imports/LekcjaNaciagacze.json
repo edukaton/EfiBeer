@@ -1,5 +1,10 @@
 [
   {
+    "title": "Dzieńdobry",
+    "description": "Witaj na lekcji poświęconej tematowi naciągaczy w internecie. Aby przejść dalej kliknij poniższy przycisk:", 
+    "type": "Info"
+  },
+  {
     "title": "Wangiri",
     "description": "Wyłudzenie polegające na uporczywym dzwonieniu do ofiary z numeru o podwyższonej opłacie i przerywaniu próby po pierwszym sygnale. Ofiara, która zdecyduje się oddzwonić, zmuszona jest pokryć (nierzadko niemały) koszt takiego połączenia.",
     "type": "Info"
@@ -41,11 +46,11 @@
         "isCorrect": false
       },
       {
-        "title": "Dane osobowe, ale bez hasła",
+        "title": "Dane osobowe bez hasła",
         "isCorrect": false
       },
       {
-        "title": "Hasło, ale bez danych osobowych",
+        "title": "Hasło bez danych osobowych",
         "isCorrect": true
       },
       {
@@ -62,7 +67,7 @@
   {
     "title": "Jesteś milionowym użytkownikiem!",
     "question": "Po wejściu na stronę ze śmiesznymi filmikami na ekranie wyskauje Ci okienko z komunikatem o następującej treści: \"Gratulacje! Jako milionowy użytkownik tej strony wygrałeś nowego iPhona X! Podaj numer swojej karty kredytowej w polu poniżej, a sami zajmiemy się wysyłką!\". Jest to przykład:",
-    "description": "Ta sytuacja jest przykładem <a href=\"https://pl.wikipedia.org/wiki/Nigeryjski_szwindel\">nigeryjskiego szwindlu</a>.",
+    "description": "Nie podawaj numeru karty kredytowej.",
     "type": "question",
     "image_path": "",
     "answers": [
@@ -105,6 +110,31 @@
       },
       {
         "title": "Kazać szwagrowi wysłać SMS o treści TOP na numer XXXXX",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "title": "Phishing",
+    "question": "Phishing to:",
+    "description": "Nazwa \"phishing\" wywodzi się od \"fishing\", czyli wędkowania. Pierwotnie była to praktyka stosowana przez phreakerów, zajmujących się włamaniami do systemów telekomunikacyjnych.",
+    "type": "question",
+    "image_path": "",
+    "answers": [
+      {
+        "title": "Instalowanie oprogramowania pozwalającego na uzyskanie zdalnego dostępu do urządzenia",
+        "isCorrect": false
+      },
+      {
+        "title": "Nielegalne stosowanie filtrów antyspamowych",
+        "isCorrect": false
+      },
+      {
+        "title": "Podszywanie się pod inną osobę lub instytucję w celu wyłudzenia informacji",
+        "isCorrect": true
+      },
+      {
+        "title": "Hackowanie automatów do kawy",
         "isCorrect": false
       }
     ]
