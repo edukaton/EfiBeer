@@ -15,7 +15,7 @@ export default ({ userId }) =>
       {userId ?
       	<li><Link to="/admin">{<i className="far fa-edit"></i>} Edytor</Link></li>: ''
        }
-       <li><Link to="/listoflessons">{<i className="far fa-edit"></i>} Lekcje</Link></li>
+       <li><Link to="/listoflessons">{<i className="far file-alt"></i>} Lekcje</Link></li>
     </ul>
     <ul className="nav">
     	<LoginButtons />
