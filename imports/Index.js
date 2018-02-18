@@ -11,6 +11,8 @@ const Index = ({trackList}) =>
 			<br /><br />
 	    <h3>Zobacz przykładową lekcję!</h3>
 			<br /><br />
+      <h3>Załóż konto, aby stworzyć własną!</h3>
+			<br /><br />
 <div style={{"display": "block"}}>
 
 
