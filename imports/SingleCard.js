@@ -105,11 +105,15 @@ export default class SingleCard extends Component {
                                             dangerouslySetInnerHTML={{__html: card.description}}
                                         />
                                         <br /><br />
+                                        <div style={{"text-align":"center"}}>
                                         <button
                                             onClick={incrementStage}
+                                            className = "btn btn-primary"
+                                            style={{"width": "200"}}
                                         >
                                             {isLast ? 'Zakończ' : 'Dalej'}
                                         </button>
+                                        </div>
                                     </div>
                                 )}
                                 </div>
