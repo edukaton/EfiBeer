@@ -1,9 +1,5 @@
 .landingContainer {
-<<<<<<< HEAD
 	background-image: url("/landing_bg.jpeg");
-=======
-	background-image: url("landing_bg.jpg");
->>>>>>> d9f699aca70949a26834ca0465fe249b7c5e3e82
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
