@@ -21,7 +21,7 @@ const Index = ({trackList}) =>
     <Link to={`/track/${track._id}`}>
     <h4 className="card-title" style={{"color": "black"}}>{track.name}</h4>
     </Link>
-    <p className="card-text" style={{"color": "black"}}>Przejdź interaktywną lekcję ucżacą jak odróżnić prawidłowe Wiadomości od tych fałszywych.</p>
+    <p className="card-text" style={{"color": "black"}}>Przejdź interaktywną lekcję uczacą jak odróżnić prawidłowe Wiadomości od tych fałszywych.</p>
     <Link to={`/track/${track._id}`}>
     <span className="btn btn-primary">Zacznij lekcje!</span>
     </Link>
