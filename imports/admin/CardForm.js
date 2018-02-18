@@ -188,6 +188,7 @@ export default class CardForm extends Component {
               onChange={this.changeTextState('answers')}
               value={this.state.answers}
               className = "form-control"
+              required
             />
             <p>
               Schemat: Prawidłowa odpowiedź,zła odpowiedź,zła odpowiedź,zła odpowiedź
