@@ -61,7 +61,7 @@
   },
   {
     "title": "Jesteś milionowym użytkownikiem!",
-    "question": "Po wejściu na stronę ze śmiesznymi filmikami na ekranie wyskauje Ci okienko z komunikatem o następującej treści: \"Gratulacje! Jako milionowy użytkownik tej strony wygrałeś nowego iPhona X! Podaj numer swojej karty kredytowej w polu poniżej, a sami zajmiemy się wysyłką nagrody!\". Jest to przykład:",
+    "question": "Po wejściu na stronę ze śmiesznymi filmikami na ekranie wyskauje Ci okienko z komunikatem o następującej treści: \"Gratulacje! Jako milionowy użytkownik tej strony wygrałeś nowego iPhona X! Podaj numer swojej karty kredytowej w polu poniżej, a sami zajmiemy się wysyłką!\". Jest to przykład:",
     "description": "Ta sytuacja jest przykładem <a href=\"https://pl.wikipedia.org/wiki/Nigeryjski_szwindel\">nigeryjskiego szwindlu</a>.",
     "type": "question",
     "image_path": "",

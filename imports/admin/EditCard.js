@@ -1,9 +1,10 @@
 import React from 'react';
 import CardForm from './CardForm';
 import { Meteor } from 'meteor/meteor';
-import { Redirect } from 'react-router'
+import { Redirect } from 'react-router';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Cards, authorizeCard } from '../api/Cards';
+import { Link } from 'react-router-dom';
 
 const EditCard = ({card, match, history}) => card ? <div>
     <CardForm
@@ -12,6 +13,7 @@ const EditCard = ({card, match, history}) => card ? <div>
         history.push(`/admin/track/${match.params.trackId}`);
       }}
       card={card}
+      backUrl={`/admin/track/${match.params.trackId}`}
     />
   </div> : null;
 
