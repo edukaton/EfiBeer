@@ -55,19 +55,19 @@ export default class SingleCard extends Component {
                                 
                                 <div 
                                     className={classnames('singleCardflipper', {
-                                        // rotate: this.state.answered || card.type === 'Info',
+                                        // rotate: this.state.answered || card.type === 'info',
                                     })}
                                 >
-                                {!this.state.answered && card.type !== 'Info' && (
+                                {!this.state.answered && card.type.toLowerCase() !== 'info' && (
                                     <div className="singleCardFront">
                                         <div className="singleCardDescription">
                                             <h1 className="singleCardTitle">{card.title}</h1>
                                             <p>
-                                                {card.type === 'Info' ? '' : card.question}
+                                                {card.type.toLowerCase() === 'info' ? '' : card.question}
                                             </p>
                                         </div>
 
-                                        {card.type === 'truefalse' && (
+                                        {card.type.toLowerCase() === 'truefalse' && (
                                             <div className="singleCardTrueFalse">
                                             <button type="button" onClick={this.toggleAnswered('prawda')} className="btn-success">
                                                 Prawda <i className="fas fa-thumbs-up"></i>
@@ -78,7 +78,7 @@ export default class SingleCard extends Component {
                                         </div>
                                         )}
 
-                                        {card.type === 'question' && (
+                                        {card.type.toLowerCase() === 'question' && (
                                             <div className="singleCardABCD">
                                                 {shuffleArray(card.answers.split(',').map(answer => (
                                                     <button 
@@ -95,11 +95,11 @@ export default class SingleCard extends Component {
                                     </div>
                                 )}
 
-                                {(this.state.answered || card.type === 'Info') && (
+                                {(this.state.answered || card.type.toLowerCase() === 'info') && (
                                     <div className="singleCardBack">
                                         <h1 className="singleCardTitle">{card.title}</h1>
                                     
-                                        {card.type !== 'Info' && (
+                                        {card.type.toLowerCase() !== 'info' && (
                                             <h2>{this.state.correct ? 'Dobrze' : 'Źle'}</h2>
                                         )}
                                         <div
