@@ -85,7 +85,15 @@ export default class CardForm extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    this.props.onSubmit(this.state);
+    if (this.state.type.toLowerCase() === 'truefalse') {
+      this.setState({
+        answers: this.state.isCorrect ? 'Prawda,Fałsz' : 'Fałsz,Prawda',
+      }, () => {
+        this.props.onSubmit(this.state);
+      })
+    } else {
+      this.props.onSubmit(this.state);
+    }
   }
 
   render() {
