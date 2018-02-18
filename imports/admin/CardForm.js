@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
+import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const stateToPick = {
   info: [
@@ -184,7 +186,13 @@ export default class CardForm extends Component {
             </p>
           </div>
         )}
-        <button className="btn btn-success">Wyślij</button>
+        <div>
+        <br />
+        <button className="btn btn-success float-right">Wyślij</button>
+        <Link to={this.props.backUrl}>
+          <button type="button" className="btn btn-info">Cofnij</button>
+        </Link>
+        </div>
       </div>
       </form>
     );

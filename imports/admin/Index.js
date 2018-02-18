@@ -60,6 +60,8 @@ class Index extends Component {
     }
   }
 
+
+
   changeNewTrackName(e) {
     this.setState({
       newTrackName: e.target.value,
@@ -108,10 +110,13 @@ class Index extends Component {
                 
                 </td>
                 <td>
-                <button onClick={this.changeEditingTrackId(track._id, track.name)} className="btn-warning">Edytuj nazwę</button>
+                <input value={`${window.location.hostname}/track/${track._id}`} />
                 </td>
                 <td>
-                <button onClick={this.deleteTrack(track._id)} className="btn-danger">Usuń</button>
+                <button onClick={this.changeEditingTrackId(track._id, track.name)} className=" btn btn-warning">Edytuj nazwę</button>
+                </td>
+                <td>
+                <button onClick={this.deleteTrack(track._id)} className="btn btn-danger">Usuń</button>
                 </td>
               </tr>
             ))}

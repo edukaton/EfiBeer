@@ -26,39 +26,22 @@ class CardList extends Component {
         <Link to={`/admin/track/${track._id}/add-card`} className = "btn btn-primary btn-block">
           Dodaj nową kartę
         </Link>
-        <ul>
-          {cardList.map(card => (
-            <li>
-              <Link to={`/admin/track/${track._id}/edit-card/${card._id}`}>
-                {card.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
         <br />
         <h4 className = "text-center">
           Aktualnie karty:
         </h4>
         <div classNameName="row list-of-paths">
           <ul className="list-group">
+          {cardList.map(card => (
             <li className="list-group-item">
-              Tytuł karty
+              <Link to={`/admin/track/${track._id}/edit-card/${card._id}`}>
+                {card.title}
+              </Link>
               <span className="badge float-right badge-success">
-                Info
+                {card.type}
               </span>
             </li>
-            <li className="list-group-item">
-              Tytuł karty
-              <span className="badge float-right badge-success">
-                ABCD
-              </span>
-            </li>
-            <li className="list-group-item">
-              Tytuł karty
-              <span className="badge float-right badge-success">
-                True/False
-              </span>
-            </li>
+          ))}
           </ul>
         </div>
       </div>
