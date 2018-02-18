@@ -39,3 +39,4 @@ const Index = ({trackList}) =>
 export default withTracker(() => ({
 	trackList: Tracks.find({ userId: -1 }).fetch(),
 }))(Index);
+

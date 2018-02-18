@@ -47,3 +47,12 @@ div.landingCenter h3 {
 .card-img-top {
 	padding-bottom: 10px;
 }
+
+
+.nav>li>a:focus, .nav>li>a:hover {
+	background: none !important;
+}
+
+#mainNavbarComponent ul.nav #login-dropdown-list a {
+	color: black !important;
+}

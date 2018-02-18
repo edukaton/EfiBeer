@@ -105,10 +105,10 @@ export default class CardForm extends Component {
     'background': 'linear-gradient(to right, #5B86E5, #36D1DC)', 'height': '100%', 'height': '100vh'}} >
       <div className = "container" style={{'max-width': 600, 'background': 'white', 'height': '100%', 'height': '100vh'}}>
         <h3 className = "text-center">
-          Stwórz własną fraszkę!
+          Stwórz własną fiszkę!
         </h3>
         <p className = "">
-          Wybierz rodzaj fraszki:
+          Wybierz rodzaj fiszki:
         </p>
         <Select
           value={this.state.type}
@@ -128,7 +128,7 @@ export default class CardForm extends Component {
           type="text"
           value={this.state.title}
           onChange={this.changeTextState('title')}
-          placeholder="Wisz tytuł fraszki"
+          placeholder="Wpisz tytuł fraszki"
           className = "form-control"
         />
         <br />
