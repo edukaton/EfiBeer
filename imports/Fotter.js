@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default ({ userId }) => 
   <div className="container-fluid" style={{"background": "black", "color": "white", "text-align": "center"}}>
-    <p>
+    <p style={{"padding":"20px 0 10px 0"}}>
       Strona wykonana oraz rozwijana przez grupę EfiBeer.
     </p>
   </div>;
