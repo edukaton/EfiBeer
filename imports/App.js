@@ -21,6 +21,7 @@ import AdminCardList from './admin/CardList';
 import AdminAddCard from './admin/AddCard';
 import AdminEditCard from './admin/EditCard';
 import Fotter from './Fotter.js';
+import ListofLessons from './ListOfLessons.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 Meteor.subscribe('cards');
@@ -49,6 +50,7 @@ class App extends Component {
             <Route exact path="/track/:trackId" component={Track} />
             <PrivateRoute path="/admin/track/:trackId/edit-card/:cardId" component={AdminEditCard} />
             <PrivateRoute path="/admin/track/:trackId/add-card" component={AdminAddCard} />
+            <PrivateRoute path="/listOfLessons" component={ListofLessons} />
             <PrivateRoute path="/admin/track/:trackId" component={AdminCardList} />
             <PrivateRoute path="/admin" component={AdminIndex} />
             <Route component={NotFound} />
