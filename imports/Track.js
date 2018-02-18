@@ -16,12 +16,12 @@ class Track extends Component {
   }
 
   incrementStage() {
-    if (this.state.stage >= this.props.cardList.count) {
+    if (this.state.stage >= this.props.cardList.length) {
+      this.props.history.push('/');
+    } else {
       this.setState({
         stage: this.state.stage + 1,
       });
-    } else {
-      this.props.history.push('/');
     }
   }
 
