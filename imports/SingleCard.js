@@ -52,8 +52,8 @@ export default class SingleCard extends Component {
                         </div>
                         <div className="col-md-8">
                             <div className="singleCard">
-                                
-                                <div 
+
+                                <div
                                     className={classnames('singleCardflipper', {
                                         // rotate: this.state.answered || card.type === 'info',
                                     })}
@@ -69,36 +69,35 @@ export default class SingleCard extends Component {
 
                                         {card.type.toLowerCase() === 'truefalse' && (
                                             <div className="singleCardTrueFalse">
-                                            <button type="button" onClick={this.toggleAnswered('prawda')} className="btn-success">
+                                            <div onClick={this.toggleAnswered('prawda')} className="btn-success">
                                                 Prawda <i className="fas fa-thumbs-up"></i>
-                                            </button>
-                                            <button type="button" onClick={this.toggleAnswered('fałsz')} className="btn-danger" >
+                                            </div>
+                                            <div onClick={this.toggleAnswered('fałsz')} className="btn-danger" >
                                                 Fałsz <i className="fas fa-thumbs-down"></i>
-                                            </button>
+                                            </div>
                                         </div>
                                         )}
 
                                         {card.type.toLowerCase() === 'question' && (
                                             <div className="singleCardABCD">
                                                 {shuffleArray(card.answers.split(',').map(answer => (
-                                                    <button 
-                                                        type="button"
-                                                        className="btn"
+                                                    <div
+                                                        className=""
                                                         onClick={this.toggleAnswered(answer)}
-                                                    >
+                                                        >
                                                         {answer}
-                                                    </button>
+                                                    </div>
                                                 )))}
                                             </div>
                                         )}
-                                    
+
                                     </div>
                                 )}
 
                                 {(this.state.answered || card.type.toLowerCase() === 'info') && (
                                     <div className="singleCardBack">
                                         <h1 className="singleCardTitle">{card.title}</h1>
-                                    
+
                                         {card.type.toLowerCase() !== 'info' && (
                                             <h2>{this.state.correct ? 'Dobrze' : 'Źle'}</h2>
                                         )}
@@ -119,7 +118,7 @@ export default class SingleCard extends Component {
                         </div>
                         <div className="col-md-2">
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
         );

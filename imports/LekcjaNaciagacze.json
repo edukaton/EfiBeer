@@ -46,11 +46,11 @@
         "isCorrect": false
       },
       {
-        "title": "Dane osobowe, ale bez hasła",
+        "title": "Dane osobowe bez hasła",
         "isCorrect": false
       },
       {
-        "title": "Hasło, ale bez danych osobowych",
+        "title": "Hasło bez danych osobowych",
         "isCorrect": true
       },
       {
